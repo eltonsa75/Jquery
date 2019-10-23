@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula 01 Jquery</title>
+    <script src="js/jquery-3.4.1.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $("a").css("color", "red")
+        $("a").click(function(){
+            $("#titulo").css("color", "#0000ff");
+            $("#titulo").text("Curso em Jquery");
+            $("#titulo").hide();
+            $("#titulo").fadeToggle();
+        });
+    });
+
+
+    window.onload = function() {
+    document.getElementsByTagName("a") [0].onclick = alterTitulo;
+    }
+
+        function alterTitulo(){
+            document.getElementById('titulo').style.color='#0000ff';
+        }
+    </script>
+</head>
+<body>
+
+    <h1 id="titulo">Hello World!</h1>
+    <a href="#">Executar JavaScript</a>
+    <a href="#">Executar Dois</a>
+    <a href="#">Executar Outro</a>
+
+    
+</body>
+</html>
